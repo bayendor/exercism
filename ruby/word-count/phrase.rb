@@ -4,11 +4,12 @@ class Phrase
 
   attr_accessor :sentence
 
-  def new(sentence)
+  def initialize(opts)
+    @sentence = opts
   end
 
-  def word_count(sentence)
-    sentence.split.count
+  def word_count
+    { @sentence => @sentence.split.count }
   end
 
 end
