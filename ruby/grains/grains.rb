@@ -2,9 +2,6 @@
 class Grains
   attr_accessor :square
 
-  def initialize
-  end
-
   def square(square)
     2**(square - 1)
   end
