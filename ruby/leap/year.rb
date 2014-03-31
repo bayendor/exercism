@@ -7,19 +7,21 @@ class Year
   end
 
   def leap?
-    ordinary_leap_year?(year) && (!ordinary_century?(year) ||
-    exceptional_century?(year))
+    divisible_by_4?(year) && (!divisible_by_100?(year) ||
+    divisible_by_400?(year))
   end
 
-  def exceptional_century?(year)
-    year % 400 == 0
+  private
+
+  def divisible_by_4?(year)
+    year % 4 == 0
   end
 
-  def ordinary_century?(year)
+  def divisible_by_100?(year)
     year % 100 == 0
   end
 
-  def ordinary_leap_year?(year)
-    year % 4 == 0
+  def divisible_by_400?(year)
+    year % 400 == 0
   end
 end
