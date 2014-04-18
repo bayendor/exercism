@@ -3,12 +3,12 @@ class Year
   attr_accessor :year
 
   def initialize(year)
-    self.year = year
+    @year = year
   end
 
   def leap?
     divisible_by?(4, year) && (!divisible_by?(100, year) ||
-    divisible_by?(400, year))
+      divisible_by?(400, year))
   end
 
   private
