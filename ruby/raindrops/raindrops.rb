@@ -1,13 +1,23 @@
 class Raindrops
   require 'prime'
+
   attr_accessor :number
 
-  def initialize
-    @number = number
-  end
-
   def self.convert(number)
-    "1"
-  end
+    factors = number.prime_division
+    factors = factors.flatten!
+    string = ''
 
+    if factors.nil?
+      number.to_s
+    elsif factors.include?(3)
+      string += 'Pling'
+    elsif factors.include?(5)
+      string += 'Plang'
+    elsif factors.include?(7)
+      string += 'Plong'
+    else
+      number.to_s
+    end
+  end
 end
