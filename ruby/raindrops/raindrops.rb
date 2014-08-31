@@ -1,23 +1,24 @@
 class Raindrops
   require 'prime'
 
-  attr_accessor :number
-
   def self.convert(number)
-    factors = number.prime_division
-    factors = factors.flatten!
-    string = ''
+    factors = number.prime_division.flatten!
+    raindrops = ''
 
     if factors.nil?
-      number.to_s
-    elsif factors.include?(3)
-      string += 'Pling'
-    elsif factors.include?(5)
-      string += 'Plang'
-    elsif factors.include?(7)
-      string += 'Plong'
+      1
     else
-      number.to_s
+      factors.each do |n|
+        if n == 3
+          raindrops += 'Pling'
+        elsif n == 5
+          raindrops += 'Plang'
+        elsif n == 7
+          raindrops += 'Plong'
+        end
+      end
     end
+
+    raindrops.empty? ? number.to_s : raindrops
   end
 end
