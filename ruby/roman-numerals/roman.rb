@@ -1,17 +1,17 @@
 class Integer
   def to_roman
-    raise 'No notation for 0 or negative number' if self <= 0
+    fail 'No notation for 0 or negative number' if self <= 0
 
     number = self
     numeral = ''
 
-    thousands =     (number / 1000)
-    fivehundreds = 	(number % 1000 / 500)
-    hundreds = 		  (number % 1000 / 100)
-    fiftys = 		    (number % 100 / 50)
-    tens = 			    (number % 100 / 10)
-    fives =			    (number % 10 / 5)
-    ones =          (number % 10)
+    thousands     = (number / 1000)
+    fivehundreds  = (number % 1000 / 500)
+    hundreds      = (number % 1000 / 100)
+    fiftys        = (number % 100 / 50)
+    tens          = (number % 100 / 10)
+    fives         = (number % 10 / 5)
+    ones          = (number % 10)
 
     numeral += ('M' * thousands)
 
