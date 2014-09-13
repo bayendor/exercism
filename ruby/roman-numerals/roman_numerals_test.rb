@@ -2,6 +2,12 @@ require 'minitest/autorun'
 require_relative 'roman'
 
 class RomanTest < MiniTest::Test
+  def test_0
+    assert_raises RuntimeError do
+      0.to_roman
+    end
+  end
+
   def test_1
     assert_equal 'I', 1.to_roman
   end
