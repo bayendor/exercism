@@ -1,14 +1,16 @@
 class Squares
+  attr_accessor :n
+
   def initialize(n)
     @n = (1..n)
   end
 
   def square_of_sums
-    @n.reduce(:+)**2
+    n.reduce(:+)**2
   end
 
   def sum_of_squares
-    @n.map { |n| n**2 }.reduce(:+)
+    n.map { |n| n**2 }.reduce(:+)
   end
 
   def difference
