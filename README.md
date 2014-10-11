@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/bayendor/exercism/badges/gpa.svg)](https://codeclimate.com/github/bayendor/exercism)
+
 The purpose of exercism is to:
 ==============================
 
