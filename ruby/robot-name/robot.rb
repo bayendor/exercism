@@ -12,14 +12,14 @@ class Robot
   private
 
   def new_name
-    prefix + suffix
+    (prefix + suffix).join
   end
 
   def prefix
-    2.times.map { (('A'..'Z').to_a).sample }.join
+    2.times.map { (('A'..'Z').to_a).sample }
   end
 
   def suffix
-    4.times.map { (('0'..'9').to_a).sample }.join
+    4.times.map { (('0'..'9').to_a).sample }
   end
 end
