@@ -5,6 +5,12 @@ class Robot
     reset
   end
 
+  def reset
+    @name = new_name
+  end
+
+  private
+
   def new_name
     prefix + suffix
   end
@@ -15,9 +21,5 @@ class Robot
 
   def suffix
     4.times.map { (('0'..'9').to_a).sample }.join
-  end
-
-  def reset
-    @name = new_name
   end
 end
