@@ -16,10 +16,10 @@ class Robot
   end
 
   def prefix
-    2.times.map { (('A'..'Z').to_a).sample }
+    2.times.map { ('A'..'Z').to_a.sample }
   end
 
   def suffix
-    4.times.map { (('0'..'9').to_a).sample }
+    4.times.map { ('0'..'9').to_a.sample }
   end
 end
