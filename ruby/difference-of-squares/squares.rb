@@ -1,5 +1,5 @@
 class Squares
-  attr_accessor :n
+  attr_reader :n
 
   def initialize(n)
     @n = (1..n)
