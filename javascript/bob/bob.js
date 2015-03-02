@@ -15,17 +15,15 @@ if (!String.prototype.endsWith) {
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-  if ( input == input.toUpperCase() ) {
-    return 'Woah, chill out!'
+  if ( input === input.toUpperCase() && (/[a-zA-Z]/.test(input))) {
+    return 'Woah, chill out!';
+  } else if ( input.endsWith('?') ) {
+    return 'Sure.';
+  } else if (input.trim() === '') {
+    return 'Fine. Be that way!';
+  } else {
+    return 'Whatever.';
   }
-
-  if ( input.endsWith('?') ) {
-    return 'Sure.'
-
-   } else {
-      return 'Whatever.'
-  }
-
 };
 
 module.exports = Bob;
