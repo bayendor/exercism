@@ -1,9 +1,9 @@
+// Package gigasecond adds one gigasecond to Time.
 package gigasecond
 
-// import path for the time package from the standard library
 import "time"
 
-// Return Time + 1 Gigasecond
+// AddGigasecond adds 1 Gigasecond to Time
 func AddGigasecond(t time.Time) time.Time {
 	const gigasecond = 1e9
 	return t.Add(time.Second * gigasecond)
